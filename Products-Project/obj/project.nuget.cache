@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JaM1bQz3dS4/mEZCFNo6DOK02Q3/6koD/LV/+B+RlldHixpRbp8EbE59Ghqv97mQlglgSRR/NfogiHDWXELBIw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\Products-Project\\Products-Project\\Products-Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,35 @@
+﻿@model List<Product>
+<h1 class="text-center">Products</h1>
+<form asp-action="GetProductByPrice" asp-controller="Product" method="post">
+
+    <div class="form-group">
+        <label for="productPrice">Price:</label>
+        <input type="text" class="form-control" id="productName" placeholder="Enter Price:" name="Price" required>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Get Product</button>
+</form>
+
+@if (Model is not null)
+{
+    foreach (var item in Model)
+    {
+        <div class="card mt-5" style="width: 18rem;">
+
+            <div class="card-body">
+                <h4>Id: @item.Id</h4>
+
+                <h5 class="card-title">Name: @item.Name</h5>
+
+                <h6 class="card-subtitle text-body-secondary">Price: @item.Price$</h6>
+
+                <h6 class="card-text">Description: @item.Description</h6>
+
+            </div>
+
+        </div>
+
+    }
+}

@@ -1,0 +1,24 @@
+﻿@model Product
+
+<h1 class="text-center">Products</h1>
+
+<form asp-action="RemoveProduct" asp-controller="Product" method="post">
+    <div class="form-group">
+        <label for="productId">Id:</label>
+        <input type="text" class="form-control" id="productName" placeholder="Enter Id:" asp-for="Id" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Remove Product</button>
+</form>
+
+@if (Model != null)
+{
+    <div class="card mt-5" style="width: 18rem;">
+        <div class="card-body">
+            <h4>Id: @Model.Id</h4>
+            <h5 class="card-title">Name: @Model.Name</h5>
+            <h6 class="card-subtitle text-body-secondary">Price: @Model.Price</h6>
+            <h6 class="card-text">Description: @Model.Description</h6>
+        </div>
+    </div>
+}

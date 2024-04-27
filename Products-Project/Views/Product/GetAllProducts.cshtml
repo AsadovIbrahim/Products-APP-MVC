@@ -1,0 +1,15 @@
+﻿@model List<Product>
+
+<h1 class="text-center">Products</h1>
+@foreach (var item in Model)
+{
+    <div class="card container" style="width: 18rem;">
+        <div class="card-body">
+            <h4 class="card-title">ID:@item.Id</h4>
+            <h5 class="card-title">Name:@item.Name</h5>
+            <h5 class="card-subtitle mb-2 text-body-secondary">Price:@item.Price$</h5>
+            <p class="card-text">Description:@item.Description</p>
+        </div>
+    </div>
+}
+
