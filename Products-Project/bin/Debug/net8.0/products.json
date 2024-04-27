@@ -4,5 +4,11 @@
     "Name": "Sncikers",
     "Price": 2.99,
     "Description": "Carbohydrate"
+  },
+  {
+    "Id": 2,
+    "Name": "Protein",
+    "Price": 65.66,
+    "Description": "Protein,Vitamin"
   }
 ]

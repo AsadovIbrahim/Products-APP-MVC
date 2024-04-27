@@ -29,3 +29,4 @@ C:\Users\ASUS\source\repos\Products-Project\Products-Project\obj\Debug\net8.0\Pr
 C:\Users\ASUS\source\repos\Products-Project\Products-Project\obj\Debug\net8.0\Products-Project.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\Products-Project\Products-Project\obj\Debug\net8.0\ref\Products-Project.dll
 C:\Users\ASUS\source\repos\Products-Project\Products-Project\bin\Debug\net8.0\products.json
+C:\Users\ASUS\source\repos\Products-Project\Products-Project\obj\Debug\net8.0\Products-Project.sourcelink.json

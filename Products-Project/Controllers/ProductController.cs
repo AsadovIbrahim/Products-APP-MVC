@@ -7,7 +7,7 @@ namespace Products_Project.Controllers
 {
     public class ProductController : Controller
     {
-        
+
         public List<Product> Products { get; set; } = new List<Product>();
         public ProductController()
         {
@@ -28,21 +28,26 @@ namespace Products_Project.Controllers
         [HttpPost]
         public IActionResult AddProduct(Product product)
         {
-            if (Products.Exists(p=>p.Id==product.Id))
+            if (ModelState.IsValid)
             {
-                return View(product);
+                if (Products.Exists(p => p.Id == product.Id))
+                {
+                    return View(product);
 
+                }
+                Products.Add(product);
+                WriteData(Products, "products");
+                return RedirectToAction("GetAllProducts");
             }
-            Products.Add(product);
-            WriteData(Products, "products");
-            return RedirectToAction("GetAllProducts");
+            return View(product);
         }
 
         [HttpPost]
         public IActionResult GetProductById(int id)
         {
             var product = Products.FirstOrDefault(p => p.Id == id);
-            if (product != null) {
+            if (product != null)
+            {
                 return View(product);
             }
             return View();
@@ -56,10 +61,13 @@ namespace Products_Project.Controllers
         [HttpPost]
         public IActionResult GetProductByPrice(float price)
         {
-            var product = Products.Where(p=>p.Price==price).ToList();
-            if (product != null)
+            if (ModelState.IsValid)
             {
-                return View(product);
+                var product = Products.Where(p => p.Price == price).ToList();
+                if (product != null)
+                {
+                    return View(product);
+                }
             }
             return View();
         }
